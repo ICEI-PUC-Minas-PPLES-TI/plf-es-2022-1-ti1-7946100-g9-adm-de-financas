@@ -155,10 +155,18 @@ Utilizamos a metodologia do Scrum para organizar o projeto, as funções foram d
 
 ## Divisão de Papéis
 
-Samuel Almeida Pinheiro - Scrum Master
-Matheus Hoske Aguiar - Programador
-Victor Fernando Marques Ribeiro - Designer
-Lucas Garibaldi Albuqueruqe Bahia - Entrevistador
+
+|Nome| Função                                     |
+|---------------------------------|---------------|
+|Samuel Almeida Pinheiro          | Scrum Master  |
+|Matheus Hoske Aguiar             | Programador   |
+|Victor Fernando Marques Ribeiro  | Designer      |
+|Lucas Garibaldi Albuqueruqe Bahia| Entrevistador |
+
+ - 
+ - 
+ - 
+ - 
 
 ## Ferramentas
 
