@@ -20,37 +20,33 @@
             </div>
             <nav class="menu-nav">
                 <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#noticias">Notícias</a></li>
-                    <li><a href="#metas">Metas</a></li>
-                    <li></li>
-                    <li><a href="#metas">Sair</a></li>
+                    <li><a href="cadastro.html">Cadastre-se</a></li>
                 </ul>
             </nav>
         </div>
     </header>
     <div class="login">
-    <form class="modal-content animate">
-        <div class="imgcontainer">
-            <p align="center">
-                <img src="https://www.w3schools.com/howto/img_avatar2.png" alt="Avatar" class="avatar">
-            </p>
-        </div>
+        <form class="modal-content animate" onreset="login()">
+            <div class="imgcontainer">
+                <p align="center">
+                    <img src="https://www.w3schools.com/howto/img_avatar2.png" alt="Avatar" class="avatar">
+                </p>
+            </div>
 
-        <div class="container">
-            <label for="email"><b>Email</b></label>
-            <input type="text" placeholder="Digite o Email" id="email" required>
+            <div class="container">
+                <label for="email"><b>Email</b></label>
+                <input type="text" placeholder="Digite o Email" id="email" required>
 
-            <label for="psw"><b>Senha</b></label>
-            <input type="password" placeholder="Digite a Senha" id="psw" required>
+                <label for="psw"><b>Senha</b></label>
+                <input type="password" placeholder="Digite a Senha" id="psw" required>
 
-            <button id="submit" type="submit" onclick="login()" >Login</button>
-        </div>
+                <button id="submit" type="reset" >Login</button>
+            </div>
 
-        <div class="container" style="background-color:#f1f1f1">
-            <span class="psw">Esqueceu sua <a href="#">Senha?</a></span>
-        </div>
-    </form>
+            <div class="container" style="background-color:#f1f1f1">
+                <span class="psw">Esqueceu sua <a href="#">Senha?</a></span>
+            </div>
+        </form>
 </div>
 
 
@@ -67,7 +63,9 @@
         var senha = localStorage.getItem('senha');
 
          if (email == document.getElementById('email').value && senha == document.getElementById('psw').value) {
+            localStorage.setItem('logado','true')
              window.location.href = "index.html";
+             
          }
          else
          {

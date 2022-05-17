@@ -24,7 +24,7 @@
                     <li><a href="#noticias">Notícias</a></li>
                     <li><a href="#metas">Metas</a></li>
                     <li></li>
-                    <li><a href="#metas">Sair</a></li>
+                    <li><a href="#" onclick="sair()">Sair</a></li>
                 </ul>
             </nav>
         </div>
@@ -33,7 +33,7 @@
     <div class="info">
         
         <div class="foto">
-            <h3>Lady gaga</h3>
+            <h3 id="nome">Nome</h3>
             <img src="gaga.jpg">
         </div>
         <div class="dinheiros">
@@ -70,3 +70,20 @@
 
 </body>
 </html>
+<script>
+    window.onload = function () {
+    if (localStorage.getItem('logado') != 'true')
+    {
+        window.location.href = "login.html";
+    }
+    else
+    {
+        document.getElementById('nome').innerHTML = localStorage.getItem('nome');
+    }
+   }
+   function sair()
+   {
+    localStorage.setItem('logado','false')
+    window.location.href = "login.html";
+   }
+</script>
