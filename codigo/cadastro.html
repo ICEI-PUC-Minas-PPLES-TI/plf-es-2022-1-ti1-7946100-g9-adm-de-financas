@@ -35,7 +35,10 @@
 
             <div class="container">
                 <label for="email"><b>Email</b></label>
-                <input type="text" placeholder="Digite o Email" id="email" required>
+                <input type="text" placeholder="Digite seu Email" id="email" required>
+                
+                <label for="email"><b>Nome</b></label>
+                <input type="text" placeholder="Digite seu Nome" id="nome" required>
 
                 <label for="psw"><b>Senha</b></label>
                 <input type="password" placeholder="Digite a Senha" id="senha" required>
@@ -47,7 +50,7 @@
             </div>
 
             <div class="container" style="background-color:#f1f1f1">
-                <span class="psw">Já está cadastrado?<a href="login">Faça Login</a></span>
+                <span class="psw">Já está cadastrado?<a href="login.html">Faça Login</a></span>
             </div>
         </form>
     </div>
@@ -65,7 +68,9 @@
              if (document.getElementById('senha').value == document.getElementById('retype').value) {
                  localStorage.setItem('email', document.getElementById('email').value);
                  localStorage.setItem('senha', document.getElementById('senha').value);
-                
+                 localStorage.setItem('nome', document.getElementById('nome').value);
+                 window.alert('Cadastro realizado com sucesso');
+                 window.location.href = "login.html";
              }
              else {
                  window.alert('As senhas não são iguais.');
