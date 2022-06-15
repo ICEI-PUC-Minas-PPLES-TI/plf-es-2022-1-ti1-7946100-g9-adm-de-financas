@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+﻿﻿<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8">
@@ -20,11 +20,11 @@
             </div>
             <nav class="menu-nav">
                 <ul>
-                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#home">Home</a></li>
                     <li><a href="#noticias">Notícias</a></li>
-                    <li><a href="metas.html">Metas</a></li>
+                    <li><a href="#metas">Metas</a></li>
                     <li></li>
-                    <li><a href="login.html">Sair</a></li>
+                    <li><a href="#" onclick="sair()">Sair</a></li>
                 </ul>
             </nav>
         </div>
@@ -33,7 +33,7 @@
     <div class="info">
         
         <div class="foto">
-            <h3>Lady gaga</h3>
+            <h3 id="nome">Nome</h3>
             <img src="gaga.jpg">
         </div>
         <div class="dinheiros">
@@ -48,20 +48,17 @@
             <h4>Últimos lucros</h4>
             <p class="dinheirinho">R$ 200,00</p>
             <br>
-
-            <input type="button" class="btnMetas" value="Adicionar" href>
-            </a>
         </div>
         <div class="outras-coisas">
-            <h3><a href="ganhos.html">Salário</a></h3>
+            <h3><a href="#salario">Salário</a></h3>
 
-            <h3><a href="gastos.html">Contas</a></h3>
+            <h3><a href="#contas">Contas</a></h3>
 
-            <h3><a href="gastos.html">Alimentação</a></h3>
+            <h3><a href="#alimentacao">Alimentação</a></h3>
 
-            <h3><a href="gastos.html">Lazer</a></h3>
+            <h3><a href="#lazer">Lazer</a></h3>
 
-            <h3><a href="gastos.html">Outros</a></h3>
+            <h3><a href="#outros">Outros</a></h3>
 
         </div>
     </div>
@@ -72,23 +69,21 @@
     </footer>
 
 </body>
-<script> 
-
-let saldoTotal, meta, faltante, tempo
-    meta = document.getElementById('meta').value;
-    saldoTotal = document.getElementById('saldo').value;
-    faltante = meta - saldoTotal;
-    tempo = (faltante / saldoTotal)
-
-function setGoal() {
-    
-    if(saldoTotal < meta)
-    {
-        document.getElementById('txtMeta').innerHTML = "Vocêm precisa juntar" + faltante + ". Você conseguirá juntar esta quantia em " + tempo + "meses"
-    } else {
-        document.getElementById('txtMeta').innerHTML = "Você cumpriu sua meta! Parabéns"
-    }
-
-}
-</script>
 </html>
+<script>
+    window.onload = function () {
+    if (localStorage.getItem('logado') != 'true')
+    {
+        window.location.href = "login.html";
+    }
+    else
+    {
+        document.getElementById('nome').innerHTML = localStorage.getItem('nome');
+    }
+   }
+   function sair()
+   {
+    localStorage.setItem('logado','false')
+    window.location.href = "login.html";
+   }
+</script>
