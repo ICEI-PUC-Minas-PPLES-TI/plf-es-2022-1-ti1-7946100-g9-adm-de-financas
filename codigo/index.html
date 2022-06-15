@@ -38,7 +38,7 @@
         </div>
         <div class="dinheiros">
             <h4>Saldo</h4>
-            <p class="dinheirinho">R$ 2.000,00</p>
+            <p class="dinheirinho" id="saldo">R$ 0,00</p>
             <br>
 
             <h4>Últimos gastos</h4>
@@ -79,6 +79,13 @@
     else
     {
         document.getElementById('nome').innerHTML = localStorage.getItem('nome');
+		if(localStorage.getItem('saldo') != null){
+			document.getElementById('saldo').innerHTML = "R$ " +localStorage.getItem('saldo').toString();
+		}
+		else
+		{
+			document.getElementById('saldo').innerHTML = "R$ 0,00";
+		}
     }
    }
    function sair()
