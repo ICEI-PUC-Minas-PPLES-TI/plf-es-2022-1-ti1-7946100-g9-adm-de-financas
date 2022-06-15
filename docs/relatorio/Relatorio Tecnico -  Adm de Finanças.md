@@ -170,7 +170,7 @@ Utilizamos a metodologia do Scrum para organizar o projeto, as funções foram d
 |-----------|-------------------------|---------------|
 |Processo de Design Thinkgin  | Miro | https://miro.com/app/board/uXjVOA2Deks=/ | 
 |Repositório de código | GitHub | https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2022-1-ti1-7946100-g9-adm-de-financas | 
-|Hospedagem do site | Heroku | https://XXXXXXX.herokuapp.com (inacabado) |
+|Hospedagem do site | Repl.it | https://admfinancastiaw.matheushoske.repl.co/login.html |
 |Protótipo Interativo | Figma | https://www.figma.com/file/VgyE6AaKPmRLDdE6hFSvcE/Untitled?node-id=0%3A1 | 
 |Editor de código | Visual Studio Code | --- | 
 |Ferramentas de comunicação | Discord | --- | 
