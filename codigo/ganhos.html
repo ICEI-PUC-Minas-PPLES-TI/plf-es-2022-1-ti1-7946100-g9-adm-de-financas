@@ -32,10 +32,10 @@
     <div class="login">
     <form class="modal-content animate">
         <div class="container">
-            <label for="email"><b>Salario</b></label>
-            <input type="text" placeholder="Digite seu Salário" id="email" required>
+            <label for="salario"><b>Salario</b></label>
+            <input type="text" placeholder="Digite seu Salário" id="salario" required>
 
-            <button id="submit" type="submit" onclick="adicionaSalario" > Adicionar </button>
+            <button id="submit" type="submit" onclick="adicionaSalario()" > Adicionar </button>
         </div>
         </div>
     </form>
@@ -49,7 +49,8 @@
 </html>
 <script>
     function adicionaSalario(){
-        
+        localStorage.setItem('salario', document.getElementById('salario').value);
+		alert('salario adicionado com sucesso');
     }
 
 </script>
