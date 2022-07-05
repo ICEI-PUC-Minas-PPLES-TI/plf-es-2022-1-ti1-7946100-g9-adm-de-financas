@@ -39,6 +39,10 @@
         </div>
          
             <div class="dinheiros">
+                <h4>Ganho Mensal</h4>
+                <p class="dinheirinho"><asp:Label ID="lblGanho" runat="server" Text="R$0.00"></asp:Label></p>
+                <br>
+
                 <h4>Saldo</h4>
                 <p class="dinheirinho"><asp:Label ID="lblSaldo" runat="server" Text="R$0.00"></asp:Label></p>
                 <br>
@@ -56,7 +60,7 @@
         <form runat="server">
         <div class="outras-coisas">
             
-            <h3><a href="#salario">Salário</a> <asp:TextBox ID="TextBox1" runat="server" CssClass="cadastros"  Width="25%" TextMode="Number"></asp:TextBox>
+            <h3><a href="#salario">Ganho Mensal</a> <asp:TextBox ID="TextBox1" runat="server" CssClass="cadastros"  Width="25%" TextMode="Number"></asp:TextBox>
             <asp:Button ID="Button1" runat="server" Text="Adicionar" CssClass="botao" /></h3>
             
             <h3><a href="#contas">Transporte</a> <asp:TextBox ID="TextBox2" runat="server" CssClass="cadastros" TextMode="Number" Width="25%"></asp:TextBox>
