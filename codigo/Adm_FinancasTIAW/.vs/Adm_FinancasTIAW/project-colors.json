@@ -1,0 +1,16 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "f4bbf3fc-3c07-421d-8c5a-f76baa255b91": {
+      "ProjectGuid": "f4bbf3fc-3c07-421d-8c5a-f76baa255b91",
+      "DisplayName": "Adm_FinancasTIAW",
+      "ColorIndex": 0
+    },
+    "6f1c3546-ae23-4a4f-a4d3-bdf893a278e3": {
+      "ProjectGuid": "6f1c3546-ae23-4a4f-a4d3-bdf893a278e3",
+      "DisplayName": "Solution Items",
+      "ColorIndex": 1
+    }
+  },
+  "NextColorIndex": 2
+}

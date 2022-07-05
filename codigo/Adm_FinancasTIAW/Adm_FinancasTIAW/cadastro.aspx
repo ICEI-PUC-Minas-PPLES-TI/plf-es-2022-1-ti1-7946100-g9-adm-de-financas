@@ -23,7 +23,7 @@
             </div>
             <nav class="menu-nav">
                 <ul>
-                    <li><a href="login.html">Login</a></li>
+                    <li><a href="login">Login</a></li>
                 </ul>
             </nav>
         </div>
