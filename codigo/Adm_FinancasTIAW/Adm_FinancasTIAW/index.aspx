@@ -22,11 +22,10 @@
             </div>
             <nav class="menu-nav">
                 <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#noticias">Notícias</a></li>
-                    <li><a href="#metas">Metas</a></li>
+                    <li><a href="index">Home</a></li>
+                    <li><a href="metas">Metas</a></li>
                     <li></li>
-                    <li><a href="#" onclick="sair()">Sair</a></li>
+                    <li><a href="login">Sair</a></li>
                 </ul>
             </nav>
         </div>
