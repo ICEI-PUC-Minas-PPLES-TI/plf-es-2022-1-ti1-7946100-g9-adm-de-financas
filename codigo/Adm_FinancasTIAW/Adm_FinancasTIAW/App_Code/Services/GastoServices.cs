@@ -20,9 +20,6 @@ public class GastoServices : IGastoServices
     public List<Gasto> BuscarGastos(Gasto gasto)
     {
         var result = _gastoRepository.Buscar(gasto);
-        if (result.Count == 0)
-            return null;
-
         return result;
 
     }

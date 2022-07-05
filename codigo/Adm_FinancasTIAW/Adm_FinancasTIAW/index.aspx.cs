@@ -35,7 +35,8 @@ public partial class index : System.Web.UI.Page
         var carteira = _carteiraServices.BuscarCarteira(new Carteira() { Usuario = _currentUser });
         lblSaldo.Text ="R$"+ carteira.Saldo.ToString();
 
-        lblUltGastos.Text = "R$" + _gastoServices.BuscarGastos(new Gasto() { Carteira = carteira }).Sum(x => x.Valor);
+        var gastos = _gastoServices.BuscarGastos(new Gasto() { Carteira = carteira });
+        lblUltGastos.Text = "R$" + gastos.Sum(x => x.Valor);
     }
 
 }
