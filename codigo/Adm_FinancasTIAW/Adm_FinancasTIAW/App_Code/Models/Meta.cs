@@ -14,6 +14,7 @@ public class Meta
     public int? Id { get; set; } = null;
     public string Descricao { get; set; }
     public decimal? Valor { get; set; } = null;
-    public DateTime DataFim { get; set; }
+    public DateTime? DataFim { get; set; } = null;
+    public DateTime? DataInicio { get; set; } = null;
     public Usuario Usuario { get; set; }
 }

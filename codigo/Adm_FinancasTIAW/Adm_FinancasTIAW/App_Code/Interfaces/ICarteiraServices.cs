@@ -11,4 +11,7 @@ public interface ICarteiraServices
     bool CriarCarteira(Carteira carteira);
 
     Carteira BuscarCarteira(Carteira carteira);
+
+    bool AtualizarCarteira(Carteira carteira);
+    Carteira AtualizarCarteira(Carteira de, Carteira para);
 }

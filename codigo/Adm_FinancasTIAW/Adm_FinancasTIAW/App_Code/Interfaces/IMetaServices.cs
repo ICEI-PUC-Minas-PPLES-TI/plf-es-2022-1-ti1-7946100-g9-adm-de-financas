@@ -8,5 +8,7 @@ using System.Web;
 /// </summary>
 public interface IMetaServices
 {
-
+    bool AdicionarMeta(Meta meta);
+    List<Meta> BuscarMetas(Meta meta);
+    bool RemoverMeta(Meta meta);
 }

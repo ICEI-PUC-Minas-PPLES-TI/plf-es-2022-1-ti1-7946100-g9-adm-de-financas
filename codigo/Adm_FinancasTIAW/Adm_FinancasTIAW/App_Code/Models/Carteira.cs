@@ -14,4 +14,5 @@ public class Carteira
     public int? Id { get; set; } = null;
     public Usuario Usuario { get; set; }
     public decimal? Saldo { get; set; } = null;
+    public decimal? GanhoMensal { get; set; } = null;
 }

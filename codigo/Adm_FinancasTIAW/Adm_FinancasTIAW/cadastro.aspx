@@ -49,7 +49,7 @@
                 <label for="txtPsw2"><b>Repetir Senha</b></label>
                 <asp:TextBox ID="txtPsw2" runat="server" placeholder="Repita sua Senha" required="required" TextMode="Password"></asp:TextBox>
 
-                <asp:Button ID="btnSubmit" runat="server" Text="Cadastrar" OnClick="btnSubmit_Click"/><br/>
+                <asp:Button ID="btnSubmit" runat="server" Text="Cadastrar" OnClick="btnSubmit_Click" CssClass="botao"/><br/>
                 <asp:Label ID="lblRetorno" runat="server" Text="" ForeColor="Red" style="text-align:center"></asp:Label>
             </div>
 

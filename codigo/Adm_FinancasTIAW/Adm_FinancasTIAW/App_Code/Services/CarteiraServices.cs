@@ -29,4 +29,12 @@ public class CarteiraServices : ICarteiraServices
         return result[0];
 
     }
+    public bool AtualizarCarteira(Carteira carteira) 
+    {
+        return _carteiraRepository.Sobrepor(carteira);
+    }
+    public Carteira AtualizarCarteira(Carteira de, Carteira para) 
+    {
+        return null;
+    }
 }

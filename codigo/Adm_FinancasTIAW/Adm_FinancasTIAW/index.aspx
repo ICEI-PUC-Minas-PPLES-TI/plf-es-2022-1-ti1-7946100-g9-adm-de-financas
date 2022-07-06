@@ -39,20 +39,17 @@
         </div>
          
             <div class="dinheiros">
-                <h4>Ganho Mensal</h4>
-                <p class="dinheirinho"><asp:Label ID="lblGanho" runat="server" Text="R$0.00"></asp:Label></p>
-                <br>
 
                 <h4>Saldo</h4>
                 <p class="dinheirinho"><asp:Label ID="lblSaldo" runat="server" Text="R$0.00"></asp:Label></p>
                 <br>
 
-                <h4>Últimos gastos</h4>
+                <h4>Gastos no mês</h4>
                 <p class="dinheirinho"><asp:Label ID="lblUltGastos" runat="server" Text="R$0.00"></asp:Label></p>
                 <br>
 
-                <h4>Últimos lucros</h4>
-                <p class="dinheirinho"><asp:Label ID="lblUltLucros" runat="server" Text="R$0.00"></asp:Label></p>
+                <h4>Metas Atingidas</h4>
+                <p class="dinheirinho"><asp:Label ID="lblMetasAtingidas" runat="server" Text="0"></asp:Label></p>
                 <br>
             </div>
             
@@ -60,26 +57,27 @@
         <form runat="server">
         <div class="outras-coisas">
             
-            <h3><a href="#salario">Ganho Mensal</a> <asp:TextBox ID="TextBox1" runat="server" CssClass="cadastros"  Width="25%" TextMode="Number"></asp:TextBox>
-            <asp:Button ID="Button1" runat="server" Text="Adicionar" CssClass="botao" /></h3>
+            <h3><a href="#salario">   Ganho Mensal: R$</a>
+                <asp:Label ID="lblGanhoMensal" runat="server" Text="0.00"></asp:Label> <asp:TextBox ID="txtGanhoMensal" runat="server" CssClass="cadastros"  Width="20%" Height="30px" TextMode="Number" AutoPostBack="true" Visible="false"></asp:TextBox>
+            <asp:Button ID="btnEditarGanhoMensal" runat="server" Text="Editar" CssClass="botao" OnClick="btnEditarGanhoMensal_Click"  /></h3>
             
-            <h3><a href="#contas">Transporte</a> <asp:TextBox ID="TextBox2" runat="server" CssClass="cadastros" TextMode="Number" Width="25%"></asp:TextBox>
-            <asp:Button ID="Button2" runat="server" Text="Adicionar" CssClass="botao" /></h3>
+            <h3><a href="#contas" style="padding-right:30px">      Transporte</a> <asp:TextBox ID="txtCadTransporte" runat="server" CssClass="cadastros" TextMode="Number" Width="20%" Height="30px" AutoPostBack="true"></asp:TextBox>
+            <asp:Button ID="btnCadTransporte" runat="server" Text="Adicionar" CssClass="botao" OnClick="btnCadGasto_Click"  /></h3>
 
-            <h3><a href="#alimentacao">Alimentação</a><asp:TextBox ID="TextBox3" runat="server" CssClass="cadastros" TextMode="Number" Width="25%"></asp:TextBox>
-            <asp:Button ID="Button3" runat="server" Text="Adicionar" CssClass="botao" /></h3>
+            <h3><a href="#alimentacao" style="padding-right:10px">Alimentação</a><asp:TextBox ID="txtCadAlimentação" runat="server" CssClass="cadastros" TextMode="Number" Width="20%" Height="30px" AutoPostBack="true"></asp:TextBox>
+            <asp:Button ID="btnCadAlimentação" runat="server" Text="Adicionar" CssClass="botao" OnClick="btnCadGasto_Click" /></h3>
 
-            <h3><a href="#lazer">Saúde</a><asp:TextBox ID="TextBox4" runat="server" CssClass="cadastros" TextMode="Number" Width="25%"></asp:TextBox>
-            <asp:Button ID="Button4" runat="server" Text="Adicionar" CssClass="botao" /></h3>
+            <h3><a href="#lazer" style="padding-right:80px">            Saúde</a><asp:TextBox ID="txtCadSaúde" runat="server" CssClass="cadastros" TextMode="Number" Width="20%" Height="30px" AutoPostBack="true"></asp:TextBox>
+            <asp:Button ID="btnCadSaúde" runat="server" Text="Adicionar" CssClass="botao" OnClick="btnCadGasto_Click" /></h3>
 
-            <h3><a href="#outros">Lazer</a><asp:TextBox ID="TextBox5" runat="server" CssClass="cadastros" TextMode="Number"  Width="25%"></asp:TextBox>
-            <asp:Button ID="Button5" runat="server" Text="Adicionar" CssClass="botao" /></h3>
+            <h3><a href="#outros" style="padding-right:82px">Lazer           </a><asp:TextBox ID="txtCadLazer" runat="server" CssClass="cadastros" TextMode="Number"  Width="20%" Height="30px" AutoPostBack="true"></asp:TextBox>
+            <asp:Button ID="btnCadLazer" runat="server" Text="Adicionar" CssClass="botao" OnClick="btnCadGasto_Click" /></h3>
 
-            <h3><a href="#outros">Educação</a><asp:TextBox ID="TextBox6" runat="server" CssClass="cadastros" TextMode="Number" Width="25%"></asp:TextBox>
-            <asp:Button ID="Button6" runat="server" Text="Adicionar" CssClass="botao" /></h3>
+            <h3><a href="#outros"style="padding-right:30px">Educação        </a><asp:TextBox ID="txtCadEducação" runat="server" CssClass="cadastros" TextMode="Number" Width="20%" Height="30px" AutoPostBack="true"></asp:TextBox>
+            <asp:Button ID="btnCadEducação" runat="server" Text="Adicionar" CssClass="botao" OnClick="btnCadGasto_Click" /></h3>
 
-            <h3><a href="#outros">Outros</a><asp:TextBox ID="TextBox7" runat="server" CssClass="cadastros" TextMode="Number" Width="25%"></asp:TextBox>
-            <asp:Button ID="Button7" runat="server" Text="Adicionar" CssClass="botao" /></h3>
+            <h3><a href="#outros" style="padding-right:62px">Outros          </a><asp:TextBox ID="txtCadOutros" runat="server" CssClass="cadastros" TextMode="Number" Width="20%" Height="30px" AutoPostBack="true"></asp:TextBox>
+            <asp:Button ID="btnCadOutros" runat="server" Text="Adicionar" CssClass="botao" OnClick="btnCadGasto_Click" /></h3>
 
         </div>
             </form>

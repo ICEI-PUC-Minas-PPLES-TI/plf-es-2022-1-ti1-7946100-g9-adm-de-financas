@@ -42,7 +42,7 @@
                 <label for="txtPsw"><b>Senha</b></label>
                 <asp:TextBox ID="txtPsw" runat="server"  placeholder="Digite a Senha"  required TextMode="Password"></asp:TextBox>
 
-                <asp:Button ID="btnSubmit" runat="server" Text="Login" OnClick="btnSubmit_Click" /><br/>
+                <asp:Button ID="btnSubmit" runat="server" Text="Login" OnClick="btnSubmit_Click" CssClass="botao"/><br/>
                 <asp:Label ID="lblRetorno" runat="server" Text="" ForeColor="Red"></asp:Label>
             </div>
 
