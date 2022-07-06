@@ -30,6 +30,7 @@ public class UsuarioServices : IUsuarioServices
             if(criarCarteira)
                 _carteiraServices.CriarCarteira(new Carteira()
                 {
+                    GanhoMensal = 0,
                     Saldo = 0,
                     Usuario = usuario
                 });

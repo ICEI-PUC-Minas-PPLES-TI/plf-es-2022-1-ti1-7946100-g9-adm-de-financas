@@ -7,7 +7,7 @@
 
     void Application_Start(object sender, EventArgs e)
     {
-        var orm = new HoskeORM("sql10.freemysqlhosting.net","sql10503044","hiqVcMwtn2","sql10503044",HoskeORM.DBType.Mysql);
+        var orm = new HoskeORM("mysql8002.site4now.net","a8995a_tiaw","Matheus0508","db_a8995a_tiaw",HoskeORM.DBType.Mysql);
         HoskeORM.DBContext.Add(typeof(TipoGasto));
         HoskeORM.DBContext.Add(typeof(Usuario));
         HoskeORM.DBContext.Add(typeof(Carteira));

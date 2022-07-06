@@ -30,22 +30,30 @@ public partial class index : System.Web.UI.Page
         {
             _currentUser = _usuarioServices.BuscarUsuario(new Usuario() { Id = Convert.ToInt32(Session["Usuario"]) });
         }
+        if (!Page.IsPostBack) 
+        { 
+            CarregarDados();
+        }
 
-        lblNome.Text = _currentUser.Nome;
+    }
+
+    void CarregarDados() 
+    {
         var carteira = _carteiraServices.BuscarCarteira(new Carteira() { Usuario = _currentUser });
-        lblSaldo.Text ="R$"+ carteira.Saldo.ToString();
+        var gastos = _gastoServices.BuscarGastos(new Gasto() { Carteira = carteira }).Where(x => x.Data.Value.Month == DateTime.Now.Month);
+        var gastostotal = gastos.Sum(x => x.Valor);
+        lblNome.Text = _currentUser.Nome;
+        lblSaldo.Text = "R$" + (carteira.Saldo - gastostotal).ToString();
         lblGanhoMensal.Text = carteira.GanhoMensal.ToString();
-        lblMetasAtingidas.Text = 
+        lblMetasAtingidas.Text =
             _metaServices.BuscarMetas(new Meta() { Usuario = _currentUser })
             .Where(x => (x.Valor - carteira.Saldo) <= 0)
             .Where(y => y.DataFim >= DateTime.Now)
             .Count()
             .ToString();
-        var gastos = _gastoServices.BuscarGastos(new Gasto() { Carteira = carteira }).Where(x => x.Data.Value.Month == DateTime.Now.Month);
-        lblUltGastos.Text = "R$" + gastos.Sum(x => x.Valor);
+
+        lblUltGastos.Text = "R$" + gastostotal;
     }
-
-
     protected void btnCadGasto_Click(object sender, EventArgs e)
     {
         string nomegasto = ((Button)sender).ID.Replace("btnCad", "");
@@ -66,6 +74,7 @@ public partial class index : System.Web.UI.Page
                 }) ;
             }
         }
+        CarregarDados();
     }
 
     protected void btnEditarGanhoMensal_Click(object sender, EventArgs e)
@@ -80,9 +89,24 @@ public partial class index : System.Web.UI.Page
             //Inserit
             var carteira = _carteiraServices.BuscarCarteira(new Carteira() { Usuario = _currentUser });
             carteira.GanhoMensal = Convert.ToDecimal(txtGanhoMensal.Text);
-            _carteiraServices.AtualizarCarteira(carteira);
+            //_carteiraServices.AtualizarCarteira(carteira);
+            using (MySql.Data.MySqlClient.MySqlConnection cn = new MySql.Data.MySqlClient.MySqlConnection("server=mysql8002.site4now.net;database=db_a8995a_tiaw;uid=a8995a_tiaw;pwd=Matheus0508;")) { 
+                cn.Open();
+                using (var cmd = new MySql.Data.MySqlClient.MySqlCommand($"update carteira set ganhomensal = {Convert.ToDecimal(txtGanhoMensal.Text).ToString().Replace(",", ".")} where usuario_id = {_currentUser.Id}", cn)) 
+                { 
+                    cmd.ExecuteNonQuery();
+                }
+                using (var cmd = new MySql.Data.MySqlClient.MySqlCommand($"update carteira set saldo = {(Convert.ToDecimal(txtGanhoMensal.Text)).ToString().Replace(",",".")} where usuario_id = {_currentUser.Id}", cn))
+                {
+                    cmd.ExecuteNonQuery();
+                }
+                cn.Close();
+                cn.Dispose();
+            }
             lblGanhoMensal.Visible = true;
             txtGanhoMensal.Visible = false;
+            CarregarDados();
         }
+        
     }
 }
