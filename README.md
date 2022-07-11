@@ -6,14 +6,13 @@ Escreva um ou dois  parágrafo resumindo o objetivo do seu projeto.
 
 * Matheus Hoske Aguiar
 * Samuel Almeida Pinheiro
-* Nome completo do aluno 3
-* Nome completo do aluno 4
+* Victor Fernando Marques Ribeiro
 
 ## Professores responsáveis
 
-* Nome completo do professor 1
-* Nome completo do professor 2
+* Joao Luiz Silva Barbosa
+* Simone Alves Nogueira
 
 ## Instruções de utilização
 
-Assim que a primeira versão do sistema estiver disponível, deverá complementar com as instruções de utilização. Descreva como instalar eventuais dependências e como executar a aplicação.
+Acesso ao site pelo link: http://tiawsite-001-site1.etempurl.com/
