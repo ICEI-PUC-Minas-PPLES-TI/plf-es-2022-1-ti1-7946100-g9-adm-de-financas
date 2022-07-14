@@ -12,8 +12,6 @@ Escreva um ou dois  parágrafo resumindo o objetivo do seu projeto.
 
 * Joao Luiz Silva Barbosa
 * Simone Alves Nogueira
-* Rommel Carneiro
-* Amália Soares Vieira de Vasconcelos
 
 ## Instruções de utilização
 
