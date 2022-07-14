@@ -1,0 +1,25 @@
+cff-version: 1.0.1
+message: Please cite this software using these metadata.
+title: Administração de Finanças
+authors:
+  - family-names: Hoske Aguiar
+    given-names: Matheus
+  - family-names: Almeida Pinheiro
+    given-names: Samuel
+  - family-names: Fernando Marques Ribeiro
+    given-names: Victor 
+   - name-suffix: Professor
+    affiliation: PUC Minas
+    family-names: Luiz Silva Barbosa
+    given-names: Joao 
+  - name-suffix: Professor
+    affiliation: PUC Minas
+    family-names: Alves Nogueira
+    given-names: Simone
+keywords:
+  - finanças
+  - organização
+repository-code: https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2022-1-ti1-7946100-g9-adm-de-financas
+license: CC-BY-4.0
+version: 1.0.0
+date-released: 2022-07-14
